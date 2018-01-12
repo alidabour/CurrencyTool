@@ -8,7 +8,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from database import ExchangeRateModel, Base
  
-engine = create_engine('sqlite:///sqlalchemy_example.db')
+engine = create_engine('sqlite:///currency_tool.db')
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)

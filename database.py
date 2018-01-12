@@ -17,5 +17,5 @@ class ExchangeRateModel(Base):
 	# Make  sure we do n't have two same records
 	__table_args__ =(UniqueConstraint('date','base','currency',name='_date_base_currency_uc'),)
 
-engine = create_engine('sqlite:///sqlalchemy_example.db')
+engine = create_engine('sqlite:///currency_tool.db')
 Base.metadata.create_all(engine)
